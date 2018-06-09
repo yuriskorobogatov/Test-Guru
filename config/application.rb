@@ -14,5 +14,9 @@ module TestGuru
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
+    config.time_zone = 'Ekaterinburg'
+    I18n.available_locales = %i[ru en]
+    I18n.default_locale = :ru
+    config.encoding = 'utf-8'
   end
 end
