@@ -1,24 +1,13 @@
-# README
+Users
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Admin
 
-Things you may want to cover:
+Questions
 
-* Ruby version
+Answers
 
-* System dependencies
+Tests
 
-* Configuration
+Categories
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Results
