@@ -3,6 +3,6 @@ Rails.application.routes.draw do
   root 'welcome#index'
 
   get 'welcome/about'
-  get 'welcome/about/author', to: 'welcome#author'
+  get 'welcome/about/about', to: 'welcome#about'
   resources :welcome
 end
