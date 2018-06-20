@@ -16,6 +16,6 @@ module TestGuru
     # -- all .rb files in that directory are automatically loaded.
     config.time_zone = 'Ekaterinburg'
     I18n.available_locales = %i[ru en]
-    config.I18n.default_locale = :ru
+    config.i18n.default_locale = :ru
   end
 end
