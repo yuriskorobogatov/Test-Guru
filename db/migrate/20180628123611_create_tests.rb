@@ -9,3 +9,4 @@ class CreateTests < ActiveRecord::Migration[5.1]
     end
   end
 end
+exti
