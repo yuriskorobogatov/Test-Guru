@@ -1,9 +1,8 @@
 class Test < ApplicationRecord
 
-  has_many :users, through: :user_test_throughs
-  has_many :user_test_throughs
+  has_and_belongs_to_many :users
+  has_and_belongs_to_many :categories
   has_many :questions
-  
 
   
 
