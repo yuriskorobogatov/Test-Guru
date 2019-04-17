@@ -1,7 +1,7 @@
 class User < ApplicationRecord
 
     has_and_belongs_to_many :tests
-    has_many :tests
+    has_many :author_tests, class_name: 'Test'
     
 
     def test_list (level)

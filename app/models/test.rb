@@ -3,7 +3,7 @@ class Test < ApplicationRecord
   has_and_belongs_to_many :users
   has_and_belongs_to_many :categories
   has_many :questions
-  belongs_to :user
+  belongs_to :author, class_name: 'User', foreign_key: :user_id
 
   
 

@@ -33,6 +33,11 @@ ActiveRecord::Schema.define(version: 20190417041553) do
     t.index ["category_id", "test_id"], name: "index_categories_tests_on_category_id_and_test_id", unique: true
   end
 
+  create_table "child", force: :cascade do |t|
+    t.text "description"
+    t.integer "users"
+  end
+
   create_table "questions", force: :cascade do |t|
     t.string "body", null: false
     t.integer "test_id", null: false
