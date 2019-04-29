@@ -1,7 +1,7 @@
 class QuestionsController < ApplicationController
 
     before_action :set_test, only: [:index, :create, :new]
-    before_action :set_question, only: [:show, :destroy]
+    before_action :set_question, only: [:show, :destroy, :edit]
   
     rescue_from ActiveRecord::RecordNotFound, with: :question_not_found
   
@@ -12,7 +12,7 @@ class QuestionsController < ApplicationController
     end
   
     def show
-      set_question
+     
     end
   
     def new
@@ -31,14 +31,13 @@ class QuestionsController < ApplicationController
     end
     #чтобы получить ресурс
     def edit
-      set_question
+     
     end
     #чтобы обновить ресурс
-    #при редактировании вопроса по информации из консоли всё в норме, но body у @question остается неизменным!!!!!????????
     def update 
       @question = Question.find(params[:id])
   
-      if @question.save(question_params)
+      if @question.update(question_params)
          redirect_to @question        
       else
         ["Error!", @question.errors.full_messages, "Question can not be updated!"]
@@ -62,7 +61,8 @@ class QuestionsController < ApplicationController
     end
   
     def question_params
-      params.require(:question).permit(:body, :test_id)
+      #параметр :test_id тут не добавляю т.к. получаю его через ассоциации
+      params.require(:question).permit(:body)
     end
   
     def question_not_found
