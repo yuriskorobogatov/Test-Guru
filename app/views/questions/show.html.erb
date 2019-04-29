@@ -1,0 +1,10 @@
+
+<strong> Body: </strong> <br><br>
+Вопрос: <%= @question.body%>
+<br><br>
+<%= link_to 'Edit', edit_question_path(@question)%>
+
+<%= link_to 'New', "/tests/#{@question.test.id}/questions/new" %> 
+
+<%= link_to 'List', "/tests/#{@question.test.id}/questions" %>
+

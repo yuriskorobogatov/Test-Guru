@@ -1,41 +1,54 @@
 class QuestionsController < ApplicationController
 
-    before_action :set_test, only: [:index, :create]
+    before_action :set_test, only: [:index, :create, :new]
     before_action :set_question, only: [:show, :destroy]
   
     rescue_from ActiveRecord::RecordNotFound, with: :question_not_found
   
+      #Список вопросов теста и сам тест
     def index
-      result = @test.questions.pluck(:body)
-  
-      render plain: result.join("\n")
+      @test_name = @test.title
+      @result = @test.questions
     end
   
     def show
-      render plain: @question.body
+      set_question
     end
   
     def new
+      @question = @test.questions.new
     end
   
     def create
-      question = @test.questions.new(question_params)
+      @question = @test.questions.new(question_params)
   
-      result = if question.save
-                 ["test_id: #{@test.id}",
-                  "Question id: #{question.id}",
-                  "Question Body: #{question.body}"]
-               else
-                 ["Error!", question.errors.full_messages, "Question can not be created!"]
-               end
+      if @question.save
+         redirect_to @question        
+      else
+        ["Error!", @question.errors.full_messages, "Question can not be created!"]
+        render :new
+      end
+    end
+    #чтобы получить ресурс
+    def edit
+      set_question
+    end
+    #чтобы обновить ресурс
+    #при редактировании вопроса по информации из консоли всё в норме, но body у @question остается неизменным!!!!!????????
+    def update 
+      @question = Question.find(params[:id])
   
-      render plain: result.join("\n")
+      if @question.save(question_params)
+         redirect_to @question        
+      else
+        ["Error!", @question.errors.full_messages, "Question can not be updated!"]
+        render :edit
+      end
     end
   
     def destroy
       @question.destroy
-  
-      render plain: 'Question deleted'
+      redirect_to "/tests/#{@question.test_id}/questions"
     end
   
     private
@@ -49,7 +62,7 @@ class QuestionsController < ApplicationController
     end
   
     def question_params
-      params.require(:question).permit(:body)
+      params.require(:question).permit(:body, :test_id)
     end
   
     def question_not_found

@@ -1,0 +1,10 @@
+<% if resource.errors.present? %>
+    <div>
+        <h6> Errors detected: </h6>
+        <ul>
+            <% resource.errors.full_messages.each do |message| %>
+            <li> <h6> <%= message%> </h6></li>
+            <%end%>
+        <ul>
+    </div>
+    <%end%>
