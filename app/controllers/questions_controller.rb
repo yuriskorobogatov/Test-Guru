@@ -1,41 +1,53 @@
 class QuestionsController < ApplicationController
 
-    before_action :set_test, only: [:index, :create]
-    before_action :set_question, only: [:show, :destroy]
+    before_action :set_test, only: [:index, :create, :new]
+    before_action :set_question, only: [:show, :destroy, :edit]
   
     rescue_from ActiveRecord::RecordNotFound, with: :question_not_found
   
+      #Список вопросов теста и сам тест
     def index
-      result = @test.questions.pluck(:body)
-  
-      render plain: result.join("\n")
+      @test_name = @test.title
+      @result = @test.questions
     end
   
     def show
-      render plain: @question.body
+     
     end
   
     def new
+      @question = @test.questions.new
     end
   
     def create
-      question = @test.questions.new(question_params)
+      @question = @test.questions.new(question_params)
   
-      result = if question.save
-                 ["test_id: #{@test.id}",
-                  "Question id: #{question.id}",
-                  "Question Body: #{question.body}"]
-               else
-                 ["Error!", question.errors.full_messages, "Question can not be created!"]
-               end
+      if @question.save
+         redirect_to @question        
+      else
+        ["Error!", @question.errors.full_messages, "Question can not be created!"]
+        render :new
+      end
+    end
+    #чтобы получить ресурс
+    def edit
+     
+    end
+    #чтобы обновить ресурс
+    def update 
+      @question = Question.find(params[:id])
   
-      render plain: result.join("\n")
+      if @question.update(question_params)
+         redirect_to @question        
+      else
+        ["Error!", @question.errors.full_messages, "Question can not be updated!"]
+        render :edit
+      end
     end
   
     def destroy
       @question.destroy
-  
-      render plain: 'Question deleted'
+      redirect_to "/tests/#{@question.test_id}/questions"
     end
   
     private
@@ -49,6 +61,7 @@ class QuestionsController < ApplicationController
     end
   
     def question_params
+      #параметр :test_id тут не добавляю т.к. получаю его через ассоциации
       params.require(:question).permit(:body)
     end
   
