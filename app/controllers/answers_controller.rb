@@ -1,6 +1,6 @@
 class AnswersController < ApplicationController
-  before_action :set_answer, only: %i[show, edit, update, destroy]
-  before_action :find_question, only: %i[create, new]
+  before_action :set_answer, only: %i[show edit update destroy]
+  before_action :find_question, only: %i[create new]
 
   # GET /answers/1
   def show
@@ -18,10 +18,10 @@ class AnswersController < ApplicationController
   # POST /answers
   # POST /answers.json
   def create
-    @answer = Answer.new(answer_params)
-
-    if @answer.save
-      redirect_to @answer
+    @answer = @question.answers.new(answer_params)
+    
+    if @answer.save!
+      redirect_to @answer, notice: 'Answer was successfully created.'
     else
       render :new
     end
