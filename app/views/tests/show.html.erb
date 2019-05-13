@@ -11,6 +11,12 @@
 <p>
   <strong>Category:</strong>
   <%= Category.where(id: @test.category_ids).pluck(:title) %>
+  
+</p>
+
+<p>
+  <strong>Author:</strong>
+  <%= User.where(id: @test.user_id).pluck(:login) %>
 </p>
 
 <p>
