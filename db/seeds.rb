@@ -20,13 +20,14 @@ Category.create([
 
 Test.delete_all
 users = User.ids
+categories = Category.ids
 Test.create([
-    {title: 'junior_ingeneer', level: 0, user_id: users[0]},
-    {title: 'junior_ingeneer', level: 1, user_id: users[0]},
-    {title: 'middle_ingeneer', level: 0, user_id: users[1]},
-    {title: 'middle_ingeneer', level: 1, user_id: users[1]},
-    {title: 'senior_ingeneer', level: 0, user_id: users[2]},
-    {title: 'senior_ingeneer', level: 1, user_id: users[2]} ])
+    {title: 'junior_ingeneer', level: 0, user_id: users[0], category_id: categories[0]},
+    {title: 'junior_ingeneer', level: 1, user_id: users[0], category_id: categories[0]},
+    {title: 'middle_ingeneer', level: 0, user_id: users[1], category_id: categories[1]},
+    {title: 'middle_ingeneer', level: 1, user_id: users[1], category_id: categories[1]},
+    {title: 'senior_ingeneer', level: 0, user_id: users[2], category_id: categories[2]},
+    {title: 'senior_ingeneer', level: 1, user_id: users[2], category_id: categories[2]} ])
 
 Question.delete_all
 tests = Test.ids

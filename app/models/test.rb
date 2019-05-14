@@ -5,7 +5,7 @@ class Test < ApplicationRecord
   has_many :test_passages
   has_many :users, through: :test_passages
   
-  has_and_belongs_to_many :categories
+  belongs_to :category
   has_many :questions
   belongs_to :author, class_name: 'User', foreign_key: :user_id
 
@@ -15,8 +15,7 @@ class Test < ApplicationRecord
   scope :simple_level, ->  { where(level: 0..1)}
   scope :average_level, -> { where(level: 2..4)}
   scope :high_level, ->    { where(level: 4..Float::INFINITY)}
-  scope :show_tests, -> (category) {Test.joins('JOIN categories_tests ON tests.id = categories_tests.test_id')
-    .where('categories_tests.category_id = ?', Category.where(title: category).ids)
-    .order(title: :desc).pluck(:title)}
+  scope :show_tests, -> (category) { where(category_id: Category.where(title: category).ids)}
+  
 
 end
