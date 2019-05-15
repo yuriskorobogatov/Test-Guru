@@ -47,7 +47,7 @@ class QuestionsController < ApplicationController
   
     def destroy
       @question.destroy
-      redirect_to "/tests/#{@question.test_id}/questions"
+      redirect_to "/tests/#{@question.test_id}"
     end
   
     private

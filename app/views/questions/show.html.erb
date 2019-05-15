@@ -11,9 +11,9 @@
 </ol>
 
 
-<%= link_to 'Edit', edit_question_path(@question)%>
+<%= link_to 'Edit question', edit_question_path(@question)%>
 
-<%= link_to 'New', "/tests/#{@question.test.id}/questions/new" %> 
+<%= link_to 'New question', "/tests/#{@question.test.id}/questions/new" %> 
 
-<%= link_to 'List', "/tests/#{@question.test.id}" %>
+<%= link_to 'List of questions', "/tests/#{@question.test.id}" %>
 

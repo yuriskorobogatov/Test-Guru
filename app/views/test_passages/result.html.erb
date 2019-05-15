@@ -1,0 +1,21 @@
+<h1> The <%= @test_passage.test.title%> test was Completed! </h1>
+
+Всего вопросов:<%= @count_of_questions%> 
+<br>
+Количество правильных ответов: <%= @correct_answers%>
+<br>
+Процент успеха: 
+<% if @persent_of_success >= 85 %>
+ <div class="success">
+   <%= @persent_of_success%> %
+ <br>
+ Тест пройден успешно</div>
+<% else %>
+ <div class="fail">
+ <%= @persent_of_success%> %
+ <br>
+ Тест не пройден</div>
+<% end %>
+<br>
+<%= link_to 'List of tests', tests_path %>
+

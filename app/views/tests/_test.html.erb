@@ -1,4 +1,6 @@
 <tr align="center">
+    <!-- эту строчку я вообще правильно сделал? -->
+  <td><%= Category.where(id: test.category_id)[0].title %></td>
   <td><%= test.id %></td>
   <td><%= test.title %></td>
   <td><%= test_level(test) %></td>
