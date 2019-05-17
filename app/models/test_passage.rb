@@ -5,6 +5,8 @@ class TestPassage < ApplicationRecord
 
   before_validation :before_validation_set_first_question, on: :create
 
+  SUCCESS_LEVEL = 85
+
   def accept!(answer_ids)
     if correct_answer?(answer_ids)
       self.correct_questions += 1
@@ -25,6 +27,27 @@ class TestPassage < ApplicationRecord
   def number_of_question
     test.questions.index(current_question) + 1
   end
+
+  def persent_of_success
+    (self.correct_questions.to_f / self.test.questions.count * 100).round(2)
+  end
+
+  def check_test
+    if self.persent_of_success >= SUCCESS_LEVEL
+      return 'Тест пройден успешно'
+    else 
+      return  'Тест не пройден'
+    end
+  end
+
+  def color_for_message
+    if self.persent_of_success >= SUCCESS_LEVEL
+      return 'green'
+    else 
+      return  'red'
+    end
+  end
+
 
   private
 

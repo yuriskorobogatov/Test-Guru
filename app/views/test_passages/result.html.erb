@@ -4,18 +4,13 @@
 <br>
 Количество правильных ответов: <%= @correct_answers%>
 <br>
-Процент успеха: 
-<% if @persent_of_success >= 85 %>
- <div class="success">
-   <%= @persent_of_success%> %
- <br>
- Тест пройден успешно</div>
-<% else %>
- <div class="fail">
- <%= @persent_of_success%> %
- <br>
- Тест не пройден</div>
-<% end %>
+Процент успеха:
+ <div class= <%= @color_for_message %> >
+   <%= @persent_of_success  %> % 
+   <br>
+   <%= @check_test  %>
+ </div> 
 <br>
+
 <%= link_to 'List of tests', tests_path %>
 
