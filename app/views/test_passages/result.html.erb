@@ -1,0 +1,16 @@
+<h1> The <%= @test_passage.test.title%> test was Completed! </h1>
+
+Всего вопросов:<%= @count_of_questions%> 
+<br>
+Количество правильных ответов: <%= @correct_answers%>
+<br>
+Процент успеха:
+ <div class= <%= @color_for_message %> >
+   <%= @persent_of_success  %> % 
+   <br>
+   <%= @check_test  %>
+ </div> 
+<br>
+
+<%= link_to 'List of tests', tests_path %>
+

@@ -1,5 +1,5 @@
 class Category < ApplicationRecord
-    has_and_belongs_to_many :tests
+    has_many :tests
 
     default_scope -> {order(title: :asc) }
 
