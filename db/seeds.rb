@@ -8,9 +8,9 @@
 
 User.delete_all
 User.create([
-    {login: 'user1', password: 'password1'}, 
-    {login: 'user2', password: 'password2'},
-    {login: :user3, password: :password3}])
+    {login: 'user1', password: 'password1', email: 'user1@mail.ru', password_digest: '122'}, 
+    {login: 'user2', password: 'password2', email: 'user2@mail.ru', password_digest: '122'},
+    {login: :user3, password: :password3, email: 'user3@mail.ru', password_digest: '122'}])
 
 Category.delete_all
 Category.create([
