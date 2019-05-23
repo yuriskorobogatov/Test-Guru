@@ -40,6 +40,7 @@ class User < ApplicationRecord
     private
 
     def digest(string)
-        Digest::SHA1.hexdigest(string)
+        str = string.to_s
+        Digest::SHA1.hexdigest(str)
     end
 end
