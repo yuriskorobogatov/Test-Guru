@@ -9,7 +9,10 @@ class User < ApplicationRecord
     has_many :tests, through: :test_passages
     has_many :author_tests, class_name: 'Test'
 
-    validates :email, presence: :true
+    validates :email, presence: :true,
+                      uniqueness: true, 
+                      :format => /\A[^@\s]+@([^@\s]+\.)+[^@\s]+\z/
+
     validates :password, presence: true, if: Proc.new { |u| u.password_digest.blank? }
     validates :password, confirmation: true
 
