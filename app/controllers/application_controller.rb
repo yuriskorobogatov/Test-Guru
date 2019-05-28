@@ -1,13 +1,15 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
-
+  
   #с помощью этого хэлпера метод current_user будет доступен во всех контроллерах
   #и шаблонах
   helper_method :current_user,
                 :logged_in?
 
   private
+
   def authenticate_user!
+    cookies[:current_url] = request.original_url if request.get?
     unless current_user
      redirect_to login_path, alert: 'Are you a Guru? Verify your Email and Password please'
     end
@@ -20,5 +22,4 @@ class ApplicationController < ActionController::Base
   def logged_in?
     current_user.present?
   end
-
 end

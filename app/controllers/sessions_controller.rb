@@ -9,10 +9,8 @@ class SessionsController < ApplicationController
     user = User.find_by(email: params[:email])
 
     if user&.authenticate(params[:password])
-      #именно метод session создает сеестию в куке
       session[:user_id] = user.id
-      #тут поставить путь из запроса
-      redirect_to tests_path
+      redirect_to cookies[:current_url] || tests_path
     else
       flash.now[:alert] = 'Are you a Guru? Verify your Email and Password please'
       render :new
@@ -20,7 +18,8 @@ class SessionsController < ApplicationController
   end
 
   def destroy
-  	session[:user_id] = nil 
-  	redirect_to 'http://localhost:3000/index', notice: "Goodbye!"
+    session[:user_id] = nil
+    cookies.delete :current_url
+  	redirect_to 'http://localhost:3000/index'
   end
 end

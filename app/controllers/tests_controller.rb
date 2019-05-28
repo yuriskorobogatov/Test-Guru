@@ -9,7 +9,7 @@ class TestsController < ApplicationController
   end
 
   def show
-
+    @url_path = request.base_url + request.path
   end
 
   def new
