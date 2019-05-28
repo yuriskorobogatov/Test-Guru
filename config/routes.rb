@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   
   get 'users/new'
 
+  get :index , to: 'public#index'
   get :signup, to: 'users#new'
   get :login, to: 'sessions#new'
   delete :destroy_session, to: 'sessions#destroy'

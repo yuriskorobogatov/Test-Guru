@@ -20,6 +20,6 @@ class SessionsController < ApplicationController
   def destroy
     session[:user_id] = nil
     cookies.delete :current_url
-  	redirect_to 'http://localhost:3000/index'
+  	redirect_to index_path
   end
 end
