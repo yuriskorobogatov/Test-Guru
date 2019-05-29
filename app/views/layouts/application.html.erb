@@ -9,7 +9,14 @@
   </head>
 
   <body>
-    
+    <% if logged_in? %>
+      <p class="nav user"> Welcome, <b> <%= current_user.email%> </b> Guru </p>
+      <p class="nav user"> <%= link_to 'Logout', destroy_session_path, method: :delete%>
+    <% else%>  
+      <p class="nav user"> <%= link_to 'Вход', login_url%>  </p>
+      <p class="nav user"> <%= link_to 'Регистрация', signup_url%> </p>
+    <% end %>
+
     <%= yield %>
     <%= render 'shared/footer'%>
   </body>
