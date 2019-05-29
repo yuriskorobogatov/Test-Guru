@@ -1,23 +1,12 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
-  
-  #с помощью этого хэлпера метод current_user будет доступен во всех контроллерах
-  #и шаблонах
-  helper_method :current_user,
-                :logged_in?
+   before_action :configure_permitted_parameters, if: :devise_controller?
 
-  private
+ protected
 
-  def authenticate_user!
-    cookies[:current_url] = request.original_url if request.get?
-    redirect_to login_path, alert: 'Are you a Guru? Verify your Email and Password please' unless current_user
-  end
-  
-  def current_user
-    @current_user ||= User.find_by(id: session[:user_id]) if session[:user_id]
+  # If you have extra params to permit, append them to the sanitizer.
+  def configure_permitted_parameters
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:attribute, :login])
   end
 
-  def logged_in?
-    current_user.present?
-  end
 end
