@@ -9,5 +9,4 @@ class Answer < ApplicationRecord
     def validate_quantity
       errors.add(:quantity, "Maximum is 4 answers") if question.answers.size >= 4
     end
-
 end
