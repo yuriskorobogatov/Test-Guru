@@ -6,11 +6,11 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-User.delete_all
-User.create([
-    {login: 'user1', password: 'password1', email: 'user1@mail.ru'}, 
-    {login: 'user2', password: 'password2', email: 'user2@mail.ru'},
-    {login: :user3, password: :password3, email: 'user3@mail.ru'}])
+# User.delete_all
+# User.create([
+#     {login: 'user1', password: 'password1', email: 'user1@mail.ru'}, 
+#     {login: 'user2', password: 'password2', email: 'user2@mail.ru'},
+#     {login: :user3, password: :password3, email: 'user3@mail.ru'}])
 
 Category.delete_all
 Category.create([
