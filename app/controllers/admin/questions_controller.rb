@@ -1,4 +1,4 @@
-class QuestionsController < ApplicationController
+class Admin::QuestionsController < Admin::BaseController
 
     before_action :authenticate_user!
     before_action :set_test, only: [:index, :create, :new]
@@ -24,7 +24,7 @@ class QuestionsController < ApplicationController
       @question = @test.questions.new(question_params)
   
       if @question.save
-         redirect_to @question        
+         redirect_to admin_question_path(@question.id)       
       else
         ["Error!", @question.errors.full_messages, "Question can not be created!"]
         render :new
@@ -39,7 +39,7 @@ class QuestionsController < ApplicationController
       @question = Question.find(params[:id])
   
       if @question.update(question_params)
-         redirect_to @question        
+         redirect_to admin_question_path       
       else
         ["Error!", @question.errors.full_messages, "Question can not be updated!"]
         render :edit
@@ -48,7 +48,7 @@ class QuestionsController < ApplicationController
   
     def destroy
       @question.destroy
-      redirect_to @question.test
+      redirect_to admin_test_path(@question.test.id)
     end
   
     private
