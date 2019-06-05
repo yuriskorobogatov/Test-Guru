@@ -1,2 +1,40 @@
 ru:
   hello: "Привет!"
+
+  helpers:
+    submit:
+      test:
+        create: "Создать тест"
+        update: "Обновить тест"
+    label:
+      test:
+        title: "Название"
+        level: "Уровень"
+        category_id: "Категория"
+
+  tests:
+    index:
+      header: "Тесты"
+
+  admin:
+    tests:
+      create:
+        success: "Тест был успешно создан"
+      index:
+        header: "Тесты"
+
+  test_passages:
+    result:
+      header: "Тест %{title} успешно завершен!"
+
+  shared:
+    errors:
+      header:
+        few: "Обнаружено %{count} ошибки"
+        many: "Обнаружено %{count} ошибок"
+        one: "Обнаружена одна ошибка"
+        other: "Обнаружено %{count} ошибки"
+
+  tests_mailer:
+    completed_test:
+      subject: "Вы только что закончили тест на ТестГуру!"
