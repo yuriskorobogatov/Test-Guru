@@ -1,14 +1,14 @@
-<h1><%= t('tests.index.header') %></h1>
+<h1><%= t('.index_title') %></h1>
 
 <table>
 
   <tr>
-    <th>category</th>
-    <th>test_id</th>
-    <th>Title</th>
-    <th>Level</th>
-    <th>Number of questions</th>
-    <th >Actions</th>
+    <th><%=t('.category')%></th>
+    <th><%=t('.test_id')%></th>
+    <th><%=t('.title')%></th>
+    <th><%=t('.level')%></th>
+    <th><%=t('.number_of_questions')%></th>
+    <th><%=t('.actions')%></th>
   </tr>
 
   <%= render @tests %>

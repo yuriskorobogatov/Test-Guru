@@ -3,6 +3,7 @@ en:
     models:
       test: "Test"
 
-  attributes:
+    attributes:
       test:
         title: "Title"
+        category: "Category"
