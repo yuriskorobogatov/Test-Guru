@@ -20,16 +20,6 @@ Rails.application.routes.draw do
       end
    end
 
-<<<<<<< HEAD
-    namespace :admin do
-     resources :tests do
-        resources :questions, shallow: true, except: :index do
-          resources :answers, shallow: true, except: :index 
-        end
-      end
-    end
-end
-=======
    namespace :admin do
       resources :tests do
         resources :questions, shallow: true, except: :index do
@@ -41,4 +31,3 @@ end
       end
     end
 end
->>>>>>> 67939b91a2eed1f352920c9b71b45dea3d3da2ed

@@ -24,11 +24,7 @@ class Admin::QuestionsController < Admin::BaseController
       @question = @test.questions.new(question_params)
   
       if @question.save
-<<<<<<< HEAD:app/controllers/admin/questions_controller.rb
-         redirect_to @question
-=======
          redirect_to admin_question_path(@question.id)       
->>>>>>> 67939b91a2eed1f352920c9b71b45dea3d3da2ed:app/controllers/admin/questions_controller.rb
       else
         ["Error!", @question.errors.full_messages, "Question can not be created!"]
         render :new
@@ -43,11 +39,7 @@ class Admin::QuestionsController < Admin::BaseController
       @question = Question.find(params[:id])
   
       if @question.update(question_params)
-<<<<<<< HEAD:app/controllers/admin/questions_controller.rb
-         redirect_to @question
-=======
          redirect_to admin_question_path       
->>>>>>> 67939b91a2eed1f352920c9b71b45dea3d3da2ed:app/controllers/admin/questions_controller.rb
       else
         ["Error!", @question.errors.full_messages, "Question can not be updated!"]
         render :edit
