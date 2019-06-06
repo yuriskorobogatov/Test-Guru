@@ -32,6 +32,10 @@
 en:
   hello: "Hello world"
 
+  helpers:
+    select:
+      prompt: "Choose category"
+
   tests:
     index:
       index_title: "List of tests"
