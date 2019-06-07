@@ -45,6 +45,8 @@ en:
       level: "Level"
       number_of_questions: "Number of questions"
       actions: "Let's start"
+    test:
+      start: "start"
 
   admin:
       nav:
@@ -75,6 +77,9 @@ en:
           body: "Question"
           test_id: "Number of test"
           actions: "Actions"
+          new_question: "New question"
+          back: "back"
+          edit: "edit"
         edit:
           back: "Back"
           edit_test: "Edit %{title} test"
