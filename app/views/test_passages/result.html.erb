@@ -1,4 +1,4 @@
-<h1> The <%= @test_passage.test.title%> test Completed! </h1>
+<h1> <%= t('.header', title: @test_passage.test.title) %> </h1>
 
 Всего вопросов:<%= @count_of_questions%> 
 <br>
@@ -19,5 +19,5 @@
   
 <br>
 
-<%= link_to 'List of tests', tests_path %>
+<%= link_to 'List of tests', current_user.admin? ? admin_tests_path : tests_path %>
 

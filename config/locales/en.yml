@@ -31,3 +31,79 @@
 
 en:
   hello: "Hello world"
+
+  helpers:
+    select:
+      prompt: "Choose category"
+
+  tests:
+    index:
+      index_title: "List of tests"
+      category: "Category"
+      test_id: "Number of test"
+      title: "Title"
+      level: "Level"
+      number_of_questions: "Number of questions"
+      actions: "Let's start"
+    test:
+      start: "start"
+
+  admin:
+      nav:
+        admin_header: "Administrator panel TestGuru"
+        logout: "Logout"
+        nav_welcome: "Welcome, %{email} Guru!"
+      tests:
+        create:
+          success: "Test was created successfully"
+        new:
+          header_new_test: "Create new test"
+          back: "back"
+        index:
+          index_title: "Tests"
+          new_test: "New Test"
+        test:
+          start: "start"
+          show: "show"
+          edit: "edit"
+          delete: "delete"
+          confirm_delete: "Are you sure?"
+        show:
+          title: "Title"
+          level: "Level"
+          category: "Category"
+          author: "Author"
+          question_id: "Number of question"
+          body: "Question"
+          test_id: "Number of test"
+          actions: "Actions"
+          new_question: "New question"
+          back: "back"
+          edit: "edit"
+        edit:
+          back: "Back"
+          edit_test: "Edit %{title} test"
+
+  test_passages:
+    result:
+      header: "Test %{title} was Complated!"
+    show:
+      header_test: "You are passing test: %{title} "
+
+  shared:
+    errors:
+      header:
+        one: "%{count} error detected"
+        other: "%{count} errors detected"
+
+  tests_mailer:
+    completed_test:
+      subject: "You just completed the TestGuru test!"
+
+  layouts:
+    application:
+      welcome: "Welcome"
+      guru: "Guru"
+      log_out: "Logout"
+      log_in: "Login"
+      registration: "Registration"

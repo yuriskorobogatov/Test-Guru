@@ -1,2 +1,99 @@
 ru:
   hello: "Привет!"
+
+  helpers:
+    submit:
+      test:
+        create: "Создать тест"
+        update: "Обновить тест"
+    label:
+      test:
+        title: "Название"
+        level: "Уровень"
+        category_id: "Категория"
+    select:
+      prompt: "Выберите категорию"
+    
+
+  tests:
+    index:
+      index_title: "Тесты"
+      category: "Категория"
+      test_id: "Номер теста"
+      title: "Название теста"
+      level: "Уровень сложности"
+      number_of_questions: "Количество вопросов"
+      actions: "Начать прохождение"
+      
+    test:
+      start: "старт"
+      
+
+
+  admin:
+    nav:
+      admin_header: "Панель администратора ТестГуру"
+      logout: "Выход"
+      nav_welcome: "Добро пожаловать %{email}"
+    tests:
+      create:
+        success: "Тест был успешно создан"
+      new:
+        header_new_test: "Создайте новый тест"
+        back: "Назад"
+      index:
+        index_title: "Тесты"
+        new_test: "Новый тест"
+        category: "Категория"
+        test_id: "Номер теста"
+        title: "Название теста"
+        level: "Уровень сложности"
+        number_of_questions: "Количество вопросов"
+        actions: "Начать прохождение теста"
+      test:
+        start: "старт"
+        show: "показать"
+        edit: "редактировать"
+        delete: "удалить"
+        confirm_delete: "Вы уверены?"
+      show:
+        title: "Название теста"
+        level: "Уровень сложности теста"
+        category: "Категория теста"
+        author: "Автор"
+        new_question: "Новый вопрос"
+        back: "Назад"
+        edit: "редактировать"
+        question_id: "Номер вопроса"
+        body: "Вопрос"
+        test_id: "Номер теста"
+        actions: "Действия"
+      edit:
+        back: "Назад"
+        edit_test: "Редактировать %{title} тест"
+
+  test_passages:
+    result:
+      header: "Тест %{title} успешно завершен!"
+    show:
+      header_test: "Прохождение теста: %{title} "
+
+  shared:
+    errors:
+      header:
+        few: "Обнаружено %{count} ошибки"
+        many: "Обнаружено %{count} ошибок"
+        one: "Обнаружена одна ошибка"
+        other: "Обнаружено %{count} ошибки"
+
+  tests_mailer:
+    completed_test:
+      subject: "Вы только что закончили тест на ТестГуру!"
+
+  layouts:
+    application:
+      welcome: "Привет"
+      guru: "Гуру"
+      log_out: "Выход"
+      log_in: "Вход"
+      registration: "Регистрация"

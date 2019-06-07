@@ -10,11 +10,11 @@
 
   <body>
     <% if user_signed_in? %>
-      <p class="nav user"> Welcome, <b> <%= current_user.email%> </b> Guru </p>
-      <p class="nav user"> <%= link_to 'Logout', destroy_user_session_path, method: :delete%>
+      <p class="nav user"> <%= t('.welcome') %><b> <%= current_user.email%> </b> <%= t('.guru') %> </p>
+      <p class="nav user"> <%= link_to "#{t('.log_out')}", destroy_user_session_path, method: :delete%>
     <% else%>  
-      <p class="nav user"> <%= link_to 'Вход', new_user_session_path%>  </p>
-      <p class="nav user"> <%= link_to 'Регистрация', new_user_registration_path%> </p>
+      <p class="nav user"> <%= link_to "#{t('.log_in')}", new_user_session_path%>  </p>
+      <p class="nav user"> <%= link_to "#{t('.registration')}", new_user_registration_path%> </p>
     <% end %>
 
     <%=render 'shared/flash'%>
