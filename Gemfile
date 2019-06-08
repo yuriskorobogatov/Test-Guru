@@ -39,7 +39,8 @@ gem 'devise'
 #localization
 gem 'rails-i18n'
 
-
+gem 'jquery-rails'
+gem 'bootstrap'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

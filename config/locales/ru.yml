@@ -85,15 +85,14 @@ ru:
         many: "Обнаружено %{count} ошибок"
         one: "Обнаружена одна ошибка"
         other: "Обнаружено %{count} ошибки"
-
+    nav:
+      log_out: "Выход"
+      log_in: "Вход"
+      registration: "Регистрация"
+      welcome: "Привет"
+      guru: "Гуру"
+      
   tests_mailer:
     completed_test:
       subject: "Вы только что закончили тест на ТестГуру!"
 
-  layouts:
-    application:
-      welcome: "Привет"
-      guru: "Гуру"
-      log_out: "Выход"
-      log_in: "Вход"
-      registration: "Регистрация"
