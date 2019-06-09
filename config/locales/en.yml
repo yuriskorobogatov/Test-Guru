@@ -49,10 +49,6 @@ en:
       start: "start"
 
   admin:
-      nav:
-        admin_header: "Administrator panel TestGuru"
-        logout: "Logout"
-        nav_welcome: "Welcome, %{email} Guru!"
       tests:
         create:
           success: "Test was created successfully"
@@ -101,6 +97,7 @@ en:
       log_out: "Logout"
       log_in: "Login"
       registration: "Registration"
+      admin_panel: "Admin panel"
 
   tests_mailer:
     completed_test:

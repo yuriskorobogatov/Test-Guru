@@ -31,10 +31,6 @@ ru:
 
 
   admin:
-    nav:
-      admin_header: "Панель администратора ТестГуру"
-      logout: "Выход"
-      nav_welcome: "Добро пожаловать %{email}"
     tests:
       create:
         success: "Тест был успешно создан"
@@ -91,6 +87,7 @@ ru:
       registration: "Регистрация"
       welcome: "Привет"
       guru: "Гуру"
+      admin_panel: "Панель администратора"
       
   tests_mailer:
     completed_test:
