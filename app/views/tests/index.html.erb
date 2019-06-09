@@ -1,16 +1,13 @@
-<h1><%= t('.index_title') %></h1>
-
-<table>
-
-  <tr>
-    <th><%=t('.category')%></th>
-    <th><%=t('.test_id')%></th>
-    <th><%=t('.title')%></th>
-    <th><%=t('.level')%></th>
-    <th><%=t('.number_of_questions')%></th>
-    <th><%=t('.actions')%></th>
-  </tr>
-
-  <%= render @tests %>
-
-</table>
+  <h3><%= t('.index_title') %></h3>
+  <table class="table">
+    <tr>
+      <th><%=t('.category')%></th>
+      <th><%=t('.test_id')%></th>
+      <th><%=t('.title')%></th>
+      <th><%=t('.level')%></th>
+      <th><%=t('.number_of_questions')%></th>
+      <th><%=t('.actions')%></th>
+    </tr>
+    
+    <%= render @tests %>
+  </table>
