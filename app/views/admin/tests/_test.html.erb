@@ -12,5 +12,5 @@
                 method: :delete,
                 data: { confirm: "#{t('.confirm_delete')}"} %>
   </td>
-  <td><%= button_to "#{t('.start')}", start_test_path(test) %></td> 
+  <td><%= button_to "#{t('.start')}", start_test_path(test), class: 'btn btn-success' %></td> 
 </tr>

@@ -1,11 +1,10 @@
-<h1><%= t('.index_title') %> </h1>
+<h3><%= t('.index_title') %> </h3>
 
 <p>
   <%= link_to "#{t('.new_test')}", new_admin_test_path %>
 </p>
 
-<table>
-
+<table class="table">
   <tr>
     <th><%= t('.category') %> </th>
     <th><%= t('.test_id') %></th>
@@ -16,5 +15,4 @@
   </tr>
 
   <%= render @tests %>
-
 </table>

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <nav class="navbar navbar-light bg-light">
@@ -6,3 +7,19 @@
   <span class="navbar-text">
   </span>
 </nav>
+=======
+<nav class="navbar navbar-light bg-light">
+    <%= link_to 'TestGuru', root_path, class: 'navbar-brand'%>
+
+    <span class="navbar-text">
+    <% if user_signed_in? %>
+      <p class="nav"> <%= t('.welcome') %><b> &nbsp <%= current_user.email%> </b> &nbsp <%= t('.guru') %> |&nbsp
+          <%= link_to "#{t('.log_out')}", destroy_user_session_path, method: :delete%></p>
+      <p class="nav"> <%= link_to "#{t('.admin_panel')}", admin_tests_path if current_user.admin?%> </p>
+    <% else%>  
+      <p class="nav user"> <%= link_to "#{t('.log_in')}", new_user_session_path%>  </p>
+      <p class="nav user"> <%= link_to "#{t('.registration')}", new_user_registration_path%> </p>
+    <% end %>
+    </span>
+</nav>
+>>>>>>> 64a4c6922a6c5fde3ad32dae046973fe7e0c4d19

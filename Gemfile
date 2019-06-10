@@ -41,8 +41,11 @@ gem 'rails-i18n'
 
 gem 'jquery-rails'
 gem 'bootstrap'
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 64a4c6922a6c5fde3ad32dae046973fe7e0c4d19
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
