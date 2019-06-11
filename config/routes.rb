@@ -16,7 +16,8 @@ Rails.application.routes.draw do
       # используем member т.к. метод result относится не к коллекции,
       # а к конкретному ресурсу
       member do
-        get :result 
+        get :result
+        post :gist 
       end
    end
 

@@ -72,7 +72,10 @@ ru:
     result:
       header: "Тест %{title} успешно завершен!"
     show:
-      header_test: "Прохождение теста: %{title} "
+      header_test: "Прохождение теста: %{title}"
+    gist:
+      success: "Gist успешно сохранен"
+      failure: "Во время сохранения gist произошла ошибка"
 
   shared:
     errors:
