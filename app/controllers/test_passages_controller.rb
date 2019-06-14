@@ -28,9 +28,9 @@ class TestPassagesController < ApplicationController
 
     def gist
       gist_service = GistQuestionService.new(@test_passage.current_question)
-
+      result = gist_service.call
+      
       flash_options = if gist_service.success?
-        result = gist_service.call
         gist_url = result.html_url
         gist_url_tag = %Q[<a href="#{gist_url}" target="_blank">gist.github.com</a>]
         current_user.gists.create(question: @test_passage.current_question,
