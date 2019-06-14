@@ -31,6 +31,8 @@
 
 en:
   hello: "Hello world"
+  app_services_GistQuestionService_descript: "Testguru question %{title}"
+  app_services_GistQuestionService_files: "Test-guru-question.txt"
 
   helpers:
     select:
@@ -84,7 +86,10 @@ en:
     result:
       header: "Test %{title} was Complated!"
     show:
-      header_test: "You are passing test: %{title} "
+      header_test: "You are passing test: %{title}"
+    gist:
+      success: "Gist %{url} was successfully created!"
+      failure: "An error occurred while saving gist"
 
   shared:
     errors:
