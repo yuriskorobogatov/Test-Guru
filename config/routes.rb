@@ -30,5 +30,7 @@ Rails.application.routes.draw do
           post :start
         end
       end
+        
+        resources :gists, only: :index
     end
 end

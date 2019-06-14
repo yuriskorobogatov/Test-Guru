@@ -1,5 +1,7 @@
 ru:
   hello: "Привет!"
+  app_services_GistQuestionService_descript: "Вопрос про %{title} из ТестГуру"
+  app_services_GistQuestionService_files: "Вопрос-тест-гуру.txt"
 
   helpers:
     submit:
@@ -67,6 +69,11 @@ ru:
       edit:
         back: "Назад"
         edit_test: "Редактировать %{title} тест"
+    gists:  
+      index:
+        question: "Вопрос"
+        url: "Адрес gist'a"
+        user: "Почтовый адрес автора"
 
   test_passages:
     result:
@@ -74,8 +81,8 @@ ru:
     show:
       header_test: "Прохождение теста: %{title}"
     gist:
-      success: "Gist успешно сохранен"
-      failure: "Во время сохранения gist произошла ошибка"
+      success: "Gist %{url} успешно сохранен"
+      failure: "Во время сохранения gist  произошла ошибка"
 
   shared:
     errors:
@@ -95,4 +102,7 @@ ru:
   tests_mailer:
     completed_test:
       subject: "Вы только что закончили тест на ТестГуру!"
+
+ 
+
 
