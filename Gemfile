@@ -46,6 +46,8 @@ gem 'faraday'
 
 gem "octokit", "~> 4.0"
 
+gem 'octicons_helper'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
