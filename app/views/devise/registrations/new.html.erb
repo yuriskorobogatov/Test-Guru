@@ -24,6 +24,9 @@
   <div class="field">
     <%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+    <%= octicon 'alert', class: 'text-danger hide' %>
+    <%= octicon 'thumbsup', class: 'text-success hide' %>
+    <span id='message'></span>
   </div>
 
   <div class="actions">
