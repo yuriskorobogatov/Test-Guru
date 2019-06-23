@@ -1,20 +1,25 @@
-<h1>Tests</h1>
+<h3><%= t('.index_title') %> </h3>
 
 <p>
-  <%= link_to 'New Test', new_admin_test_path %>
+  <%= link_to "#{t('.new_test')}", new_admin_test_path %>
 </p>
 
-<table>
+<p>
+  <%= link_to 'Таблица по gist', admin_gists_path%>
 
+<table class="table">
   <tr>
-    <th>category</th>
-    <th>test_id</th>
-    <th>Title</th>
-    <th>Level</th>
-    <th>Number of questions</th>
-    <th colspan="4">Actions</th>
+    <th class="sort-by-title pointer">
+    <%= t('.category') %> 
+    <%= octicon 'arrow-up', class: 'text-success hide' %>
+    <%= octicon 'arrow-down', class: 'text-success hide' %>
+    </th>
+    <th><%= t('.test_id') %></th>
+    <th><%= t('.title') %></th>
+    <th><%= t('.level') %></th>
+    <th><%= t('.number_of_questions') %></th>
+    <th colspan="4"><%= t('.actions') %></th>
   </tr>
 
   <%= render @tests %>
-
 </table>

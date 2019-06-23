@@ -29,9 +29,24 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
+
+#find errors
 gem 'pry'
 
+#authorization
 gem 'devise'
+
+#localization
+gem 'rails-i18n'
+
+gem 'jquery-rails'
+gem 'bootstrap'
+
+gem 'faraday'
+
+gem "octokit", "~> 4.0"
+
+gem 'octicons_helper'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -42,6 +57,7 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+  gem 'dotenv-rails'
 end
 
 group :development do
