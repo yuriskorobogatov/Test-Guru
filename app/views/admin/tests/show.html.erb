@@ -31,12 +31,7 @@
     <th colspan="3"><%= t('.actions') %></th>
   </tr>
 
-<<<<<<< HEAD
-   <%#= render partial: 'questions/question', collection: @test.questions %>
-   <%= render @test.questions %>
-=======
    <%= render partial: '/admin/questions/question', collection: @test.questions %>
->>>>>>> 67939b91a2eed1f352920c9b71b45dea3d3da2ed
 
 <p><%= link_to "#{t('.back')}", admin_tests_path %></p>
 <p><%= link_to "#{t('.edit')}", edit_admin_test_path(@test) %></p>
