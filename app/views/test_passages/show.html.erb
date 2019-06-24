@@ -1,9 +1,16 @@
 <h4> <%= t('.header_test', title: @test_passage.test.title) %> </h4>
 
+<div id="myProgress">
+  <div id="myBar"></div>
+</div>
 
-
-<h5> Это <%= @test_passage.number_of_question%> вопрос из <%= @test_passage.test.questions.count%>  </h5>
-
+<h5> Это 
+<span class="number-of-question">
+<%= @test_passage.number_of_question%>
+</span> вопрос из 
+<span class="count-of-questions">
+  <%= @test_passage.test.questions.count%>  </h5>
+</span>
 <p>
     <b><%= @test_passage.current_question.body %></b>
 </p>
