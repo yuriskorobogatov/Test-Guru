@@ -1,13 +1,20 @@
 document.addEventListener('turbolinks:load', function () {
-    var number_of_question = Number(document.querySelector('.number-of-question').textContent)
-    var count_of_questions = Number(document.querySelector('.count-of-questions').textContent)
+if (document.querySelector('.question') != null) {
+var question_sum = document.querySelector('.question').dataset.sum
+}
+if (document.querySelector('.question') != null){
+var questoin_num = document.querySelector('.question').dataset.num
+}
 
-    move(number_of_question, count_of_questions)
+move(questoin_num, question_sum)
 })
 
 function move(number, summ) {
+
   var elem = document.getElementById("myBar"); 
-      var percent = ((number-1)/summ)*100
-      elem.style.width = percent + '%'; 
-      elem.innerHTML = percent + '%';
+  var percent = ((number-1)/summ)*100
+  if (elem != null){
+  elem.style.width = percent + '%'; 
+  elem.innerHTML = percent + '%';
+  }
 }

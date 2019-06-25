@@ -11296,3 +11296,39 @@
  @protocol[32m=[0m[31m[1;31m"[0m[31mhttp://[1;31m"[0m[31m[0m,
  @remote_ip[32m=[0m[1;36mnil[0m,
  @request_method[32m=[0m[31m[1;31m"[0m[31mPOST[1;31m"[0m[31m[0m[32m>[0m
+=> [32m#<Sawyer::Response: 200 @rels={} @data={:login=>"yuriskorobogatov",
+ :id=>16113132,
+ :node_id=>"MDQ6VXNlcjE2MTEzMTMy",
+ :avatar_url=>"https://avatars0.githubusercontent.com/u/16113132?v=4",
+ :gravatar_id=>"",
+ :url=>"https://api.github.com/users/yuriskorobogatov",
+ :html_url=>"https://github.com/yuriskorobogatov",
+ :followers_url=>"https://api.github.com/users/yuriskorobogatov/followers",
+ :following_url=>
+  "https://api.github.com/users/yuriskorobogatov/following{/other_user}",
+ :gists_url=>"https://api.github.com/users/yuriskorobogatov/gists{/gist_id}",
+ :starred_url=>
+  "https://api.github.com/users/yuriskorobogatov/starred{/owner}{/repo}",
+ :subscriptions_url=>
+  "https://api.github.com/users/yuriskorobogatov/subscriptions",
+ :organizations_url=>"https://api.github.com/users/yuriskorobogatov/orgs",
+ :repos_url=>"https://api.github.com/users/yuriskorobogatov/repos",
+ :events_url=>"https://api.github.com/users/yuriskorobogatov/events{/privacy}",
+ :received_events_url=>
+  "https://api.github.com/users/yuriskorobogatov/received_events",
+ :type=>"User",
+ :site_admin=>false,
+ :name=>nil,
+ :company=>nil,
+ :blog=>"",
+ :location=>nil,
+ :email=>nil,
+ :hireable=>nil,
+ :bio=>nil,
+ :public_repos=>4,
+ :public_gists=>4,
+ :followers=>2,
+ :following=>0,
+ :created_at=>2015-12-02 06:31:19 UTC,
+ :updated_at=>2019-06-09 10:21:22 UTC}
+>[0m

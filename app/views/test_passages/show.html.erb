@@ -4,13 +4,10 @@
   <div id="myBar"></div>
 </div>
 
-<h5> Это 
-<span class="number-of-question">
-<%= @test_passage.number_of_question%>
-</span> вопрос из 
-<span class="count-of-questions">
-  <%= @test_passage.test.questions.count%>  </h5>
-</span>
+<%= content_tag :span, "Это #{@test_passage.number_of_question} вопрос из #{@test_passage.test.questions.count}",
+    class: 'question', 
+    data: {sum: @test_passage.test.questions.count, num: @test_passage.number_of_question} %>
+
 <p>
     <b><%= @test_passage.current_question.body %></b>
 </p>
