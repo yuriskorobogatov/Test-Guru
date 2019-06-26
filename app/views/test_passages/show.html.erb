@@ -1,8 +1,12 @@
 <h4> <%= t('.header_test', title: @test_passage.test.title) %> </h4>
 
+<div id="myProgress">
+  <div id="myBar"></div>
+</div>
 
-
-<h5> Это <%= @test_passage.number_of_question%> вопрос из <%= @test_passage.test.questions.count%>  </h5>
+<%= content_tag :span, "Это #{@test_passage.number_of_question} вопрос из #{@test_passage.test.questions.count}",
+    class: 'question', 
+    data: {sum: @test_passage.test.questions.count, num: @test_passage.number_of_question} %>
 
 <p>
     <b><%= @test_passage.current_question.body %></b>
