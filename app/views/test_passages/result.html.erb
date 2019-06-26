@@ -1,5 +1,9 @@
 <h1> <%= t('.header', title: @test_passage.test.title) %> </h1>
 
+<div id="myProgress">
+  <div id="myBar"></div>
+</div>
+
 Всего вопросов:<%= @count_of_questions%> 
 <br>
 Количество правильных ответов: <%= @correct_answers%>
