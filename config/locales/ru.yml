@@ -80,7 +80,7 @@ ru:
       
   test_passages:
     result:
-      header: "Тест %{title} успешно завершен!"
+      header: "Тест %{title} завершен!"
     show:
       header_test: "Прохождение теста: %{title}"
     gist:

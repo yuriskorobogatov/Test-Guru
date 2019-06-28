@@ -1,13 +1,17 @@
-<h1> <%= t('.header', title: @test_passage.test.title) %> </h1>
+<h3> <%= t('.header', title: @test_passage.test.title) %> </h3>
 
-<div id="myProgress">
-  <div id="myBar"></div>
+<div id="myProgressResult">
+  <div id="myBarResult"></div>
 </div>
 
-Всего вопросов:<%= @count_of_questions%> 
-<br>
-Количество правильных ответов: <%= @correct_answers%>
-<br>
+<%= content_tag :div, "Всего вопросов: #{@count_of_questions}",
+                class: 'questions',
+                data: {sum_questions: @count_of_questions} %>
+
+<%= content_tag :div, "Количество правильных ответов: #{@correct_answers}", 
+                class: 'answers',
+                data: {correct_answers: @correct_answers} %>
+
   <div style='display: inline-flex'>
     <div>
         Процент успеха:&nbsp
