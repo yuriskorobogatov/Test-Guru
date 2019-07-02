@@ -6,6 +6,7 @@
     if (user_password_confirmation) { user_password_confirmation.addEventListener('input', check) }
 
     if (user_password) { user_password.addEventListener('input', check) } 
+
 });
 
 var check = function() {
