@@ -101,10 +101,15 @@ ru:
       welcome: "Привет"
       guru: "Гуру"
       admin_panel: "Панель администратора"
+      contact_us: "Напишите нам"
       
   tests_mailer:
     completed_test:
       subject: "Вы только что закончили тест на ТестГуру!"
+
+  contact_forms:
+    new:
+      send_message: "Написать"
 
  
 

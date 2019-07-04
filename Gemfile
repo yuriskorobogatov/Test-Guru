@@ -48,6 +48,8 @@ gem "octokit", "~> 4.0"
 
 gem 'octicons_helper'
 
+gem 'mail_form'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
