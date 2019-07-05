@@ -49,6 +49,8 @@ en:
       actions: "Let's start"
     test:
       start: "start"
+    start:
+      start: "This test havn't questions. Passing denied"
 
   admin:
       tests:

@@ -46,6 +46,7 @@ class Admin::TestsController < Admin::BaseController
   end
 
   def destroy
+    TestPassage.where(id: @test.test_passages.ids).destroy_all
     @test.destroy
     redirect_to admin_tests_path
   end

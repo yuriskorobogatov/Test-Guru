@@ -29,6 +29,8 @@ ru:
       
     test:
       start: "старт"
+    start:
+      start: "В данном тесте нет вопросов. Прохождение не возможно"
       
 
 
@@ -110,6 +112,7 @@ ru:
   contact_forms:
     new:
       send_message: "Написать"
+  
 
  
 
