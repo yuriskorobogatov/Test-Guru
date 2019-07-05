@@ -29,6 +29,8 @@ ru:
       
     test:
       start: "старт"
+    start:
+      start: "В данном тесте нет вопросов. Прохождение не возможно"
       
 
 
@@ -80,7 +82,7 @@ ru:
       
   test_passages:
     result:
-      header: "Тест %{title} успешно завершен!"
+      header: "Тест %{title} завершен!"
     show:
       header_test: "Прохождение теста: %{title}"
     gist:
@@ -101,10 +103,16 @@ ru:
       welcome: "Привет"
       guru: "Гуру"
       admin_panel: "Панель администратора"
+      contact_us: "Напишите нам"
       
   tests_mailer:
     completed_test:
       subject: "Вы только что закончили тест на ТестГуру!"
+
+  contact_forms:
+    new:
+      send_message: "Написать"
+  
 
  
 

@@ -3,6 +3,9 @@ Rails.application.routes.draw do
   devise_for :users, controllers: {sessions: 'user/sessions'}
   
   root to: 'tests#index'
+
+  resources :contact_forms, only: %i[new create]
+
   
 
     resources :tests, only: :index do

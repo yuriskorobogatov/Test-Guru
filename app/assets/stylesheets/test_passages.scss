@@ -12,11 +12,22 @@
 
 #myProgress {
     width: 100%;
-    background-color: rgb(204, 196, 196);
-  }
+    background-color: rgb(219, 213, 213);
+}
   
 #myBar {
-  width: 1%;
-  height: 30px;
-  background-color: rgb(81, 243, 66);
+    width: 1%;
+    height: 30px;
+    background-color: rgb(50, 231, 50);
+}
+
+#myProgressResult {
+    width: 100%;
+    background-color: rgb(219, 213, 213);
+}
+  
+#myBarResult {
+    width: 1%;
+    height: 30px;
+    background-color: rgb(50, 231, 50);
 }

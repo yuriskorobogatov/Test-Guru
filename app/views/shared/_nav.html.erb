@@ -6,9 +6,11 @@
       <p class="nav"> <%= t('.welcome') %><b> &nbsp <%= current_user.email%> </b> &nbsp <%= t('.guru') %> |&nbsp
           <%= link_to "#{t('.log_out')}", destroy_user_session_path, method: :delete%></p>
       <p class="nav"> <%= link_to "#{t('.admin_panel')}", admin_tests_path if current_user.admin?%> </p>
+      <p class="nav"> <%= link_to "#{t('.contact_us')}", new_contact_form_path, class: :btn if current_user.admin? == false%>
     <% else%>  
       <p class="nav user"> <%= link_to "#{t('.log_in')}", new_user_session_path%>  </p>
       <p class="nav user"> <%= link_to "#{t('.registration')}", new_user_registration_path%> </p>
     <% end %>
+
     </span>
 </nav>

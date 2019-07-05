@@ -23,15 +23,17 @@
   <%= link_to "#{t('.new_question')}", new_admin_test_question_path(@test.id) %>
 </p>
 
-<table>
+<p><%= link_to "#{t('.back')}", admin_tests_path %></p>
+<p><%= link_to "#{t('.edit')}", edit_admin_test_path(@test) %></p>
+
+<table class='table'>
   <tr >
     <th><%= t('.question_id') %></th>
     <th><%= t('.body') %></th>
     <th><%= t('.test_id') %></th>
     <th colspan="3"><%= t('.actions') %></th>
   </tr>
+  
+<%= render partial: '/admin/questions/question', collection: @test.questions %>
 
-   <%= render partial: '/admin/questions/question', collection: @test.questions %>
-
-<p><%= link_to "#{t('.back')}", admin_tests_path %></p>
-<p><%= link_to "#{t('.edit')}", edit_admin_test_path(@test) %></p>
+</table>

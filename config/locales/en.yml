@@ -49,6 +49,8 @@ en:
       actions: "Let's start"
     test:
       start: "start"
+    start:
+      start: "This test havn't questions. Passing denied"
 
   admin:
       tests:
@@ -103,7 +105,12 @@ en:
       log_in: "Login"
       registration: "Registration"
       admin_panel: "Admin panel"
+      contact_us: "Contact Us"
 
   tests_mailer:
     completed_test:
       subject: "You just completed the TestGuru test!"
+
+  contact_forms:
+    new:
+      send_message: "Send message"
