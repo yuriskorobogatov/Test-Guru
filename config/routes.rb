@@ -6,8 +6,6 @@ Rails.application.routes.draw do
 
   resources :contact_forms, only: %i[new create]
 
-  
-
     resources :tests, only: :index do
         member do
           post :start
@@ -24,7 +22,6 @@ Rails.application.routes.draw do
       end
    end
 
-   namespace :admin do
       resources :tests do
         # on: :member нужно для того чтоб в url был идентификатор теста, с которым работаем
         patch :update_inline, on: :member

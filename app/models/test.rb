@@ -14,6 +14,5 @@ class Test < ApplicationRecord
   scope :average_level, -> { where(level: 2..4)}
   scope :high_level, ->    { where(level: 4..Float::INFINITY)}
   scope :show_tests, -> (category) { where(category_id: Category.where(title: category).ids)}
-  
 
 end

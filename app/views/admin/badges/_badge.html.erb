@@ -1,0 +1,6 @@
+<tr>
+    <td><%= badge.user_id %></td>
+    <td><%= badge.title %></td>
+    <td><%= badge.reward_link %></td>
+    <td><%= Rule.where(id: badge.rule_id)[0].title %></td>
+</tr>

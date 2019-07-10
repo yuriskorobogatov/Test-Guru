@@ -24,7 +24,7 @@ class Admin::QuestionsController < Admin::BaseController
       @question = @test.questions.new(question_params)
   
       if @question.save
-         redirect_to admin_question_path(@question.id)       
+         redirect_to admin_question_path(@question.id)
       else
         ["Error!", @question.errors.full_messages, "Question can not be created!"]
         render :new
@@ -39,7 +39,7 @@ class Admin::QuestionsController < Admin::BaseController
       @question = Question.find(params[:id])
   
       if @question.update(question_params)
-         redirect_to admin_question_path       
+         redirect_to admin_question_path
       else
         ["Error!", @question.errors.full_messages, "Question can not be updated!"]
         render :edit

@@ -8,6 +8,7 @@ class User < ApplicationRecord
     attr_reader :password
     attr_writer :password_confirmation
 
+    has_many :badges
     has_many :gists
     has_many :test_passages
     has_many :tests, through: :test_passages
