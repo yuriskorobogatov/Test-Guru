@@ -13,3 +13,5 @@
 <p> <strong> За что: </strong>
   <%= Rule.where(id: @badge.rule_id)[0].title%>
 </p>
+
+<%= link_to 'Список бэйджей', admin_badges_path %>

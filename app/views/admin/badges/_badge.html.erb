@@ -3,4 +3,13 @@
     <td><%= badge.title %></td>
     <td><%= badge.reward_link %></td>
     <td><%= Rule.where(id: badge.rule_id)[0].title %></td>
+    <td><%= link_to 'Исправить', 
+                        edit_admin_badge_path(badge) %>
+    </td>
+    <td>
+    <%= link_to 'Удалить',
+                admin_badge_path(badge),
+                method: :delete,
+                data: { confirm: "Вы уверены?"} %>
+    </td>
 </tr>
