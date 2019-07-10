@@ -1,14 +1,15 @@
-<h3> Все бэйджи </h3>
+<h3> Информация по бэйджу </h3>
 
-<table class ="table">
-  <tr>
-    <th> Автор </th>
-    <th> Название </th>
-    <th> Ссылка на бэйдж </th>
-    <th> Правило </th>
-  </tr>
 
-  <%= render @badges %>
-
-</table>
-
+<p> <strong> Автор: </strong>
+  <%= User.where(id: @badge.user_id)[0].login%>
+</p>
+<p> <strong> Название: </strong>
+  <%= @badge.title%>
+</p>
+<p> <strong> Награда: </strong>
+  <%= @badge.reward_link%>
+</p>
+<p> <strong> За что: </strong>
+  <%= Rule.where(id: @badge.rule_id)[0].title%>
+</p>

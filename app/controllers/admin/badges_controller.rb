@@ -1,24 +1,21 @@
 class Admin::BadgesController < Admin::BaseController
     before_action :authenticate_user!
-  
 
   def index
-    
-  end
-
-  def show
     @badges = Badge.all
   end
 
+  def show
+    @badge = Badge.find(params[:id])
+  end
+
   def new
-    #@badge = Badge.new
+    @badge = Badge.new
   end
 
   def create
     @badge = Badge.new(badge_params)
-    binding.pry
     @badge.author = current_user
-    binding.pry
 
     if @badge.save
         redirect_to [:admin, @badge], notice: 'Badge was create successfuilly'

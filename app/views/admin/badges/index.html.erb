@@ -1,7 +1,21 @@
-<h3> this is the index page </h3>
+<h3> Таблица всех существующих бэйджей </h3>
 
-<h1> Создание нового бэйджа </h1>
+<p>
+  <%= link_to "Создать новый бэйдж", new_admin_badge_path %>
+</p>
 
-<%= render 'form' %>
+<table class="table">
+  <tr>
+    <th> Автор </th>
+    <th> Название </th>
+    <th> Награда </th>
+    <th> За что </th>
+  </tr>
+
+    <%= render @badges %>
+    
+</table>
+
+
 
 <%= link_to "Список тестов", admin_tests_path %>

@@ -22,6 +22,8 @@ Rails.application.routes.draw do
       end
    end
 
+    namespace :admin do
+      resources :badges
       resources :tests do
         # on: :member нужно для того чтоб в url был идентификатор теста, с которым работаем
         patch :update_inline, on: :member
@@ -33,7 +35,7 @@ Rails.application.routes.draw do
           post :start
         end
       end
-        
+
         resources :gists, only: :index
     end
 end
