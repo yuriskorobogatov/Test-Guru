@@ -1,9 +1,6 @@
-
 <p>
-  <%= link_to "Создать новый бэйдж", new_admin_badge_path %>
+<%= link_to "Список тестов", tests_path %>
 </p>
-
-<%= link_to "Список тестов", admin_tests_path %>
 
 <h4> Таблица всех существующих бэйджей </h4>
 <table class="table">
@@ -12,7 +9,6 @@
     <th> Название </th>
     <th> Награда </th>
     <th> За что </th>
-    <th colspan="2"> Управление </th>
   </tr>
 
     <%= render @badges %>

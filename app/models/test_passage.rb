@@ -16,6 +16,10 @@ class TestPassage < ApplicationRecord
     save!
   end
 
+  def success_level
+    SUCCESS_LEVEL
+  end
+
   def completed?
     current_question.nil?
   end

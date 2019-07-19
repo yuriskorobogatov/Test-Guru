@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   root to: 'tests#index'
 
   resources :contact_forms, only: %i[new create]
+  resources :badges, only: %i[index]
 
     resources :tests, only: :index do
         member do

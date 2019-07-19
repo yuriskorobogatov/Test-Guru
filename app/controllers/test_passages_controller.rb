@@ -1,7 +1,7 @@
 class TestPassagesController < ApplicationController
 
   before_action :authenticate_user!  
-  before_action :set_test_passage, only: %i[show update result gist]
+  before_action :set_test_passage, only: %i[show update result gist first_time_pass_test]
 
     def show
 
@@ -15,12 +15,23 @@ class TestPassagesController < ApplicationController
       @color_for_message = @test_passage.color_for_message
     end
 
+    def first_time_pass_test
+      #binding.pry
+      @badge_id = Badge.where(rule_id: Rule.where(title: 'Пройден тест с первого раза').ids).ids[0]
+      BadgeAssign.create(user_id: current_user.id, badge_id: @badge_id) if @test_passage.persent_of_success >= @test_passage.success_level &&
+                                                                        TestPassage.where(user_id: current_user).where(test_id: @test_passage.test.id).count == 1
+      #binding.pry
+    end
+
     def update
         @test_passage.accept!(params[:answer_ids])
         
         if @test_passage.completed?
+          first_time_pass_test
+          
           TestsMailer.completed_test(@test_passage).deliver_now
           redirect_to result_test_passage_path(@test_passage)
+
         else
           render :show
         end

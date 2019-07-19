@@ -4,6 +4,7 @@ class Admin::BadgesController < Admin::BaseController
 
   def index
     @badges = Badge.all
+    @badge_assign = BadgeAssign.all
   end
 
   def show
